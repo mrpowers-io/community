@@ -1,1 +1,24 @@
 site_name: MrPowers
+site_url: https://mrpowers.io
+theme:
+  name: material
+  features:
+    - content.action.edit
+    - content.code.copy
+    - navigation.footer
+    - navigation.expand
+    - navigation.indexes
+
+nav:
+  - Home: index.md
+  - Open Source:
+      - Easy onboarding: open-source/easy-onboarding.md
+      - Grow Contributors: open-source/build-contributors.md
+      - Communicate with chat apps: open-source/chat-apps.md
+      - Code best practices: open-source/code-best-practices.md
+      - Documentation best practices: open-source/documentation-best-practices.md
+      - GitHub best practices: open-source/github-best-practices.md
+      - Grow community: open-source/grow-community.md
+      - Project metrics: open-source/project-metrics.md
+  - Code best practices:
+      - Python: code-best-practices/python.md
