@@ -1,5 +1,27 @@
 # How to grow open source communities
 
+The community generally refers to the users, maintainers, and code contributors of an open source project.
+
+There are different types of community participants:
+
+* active participants: engage on Slack, in community meetings, or in GitHub
+* lurkers: join the Slack and/or community meetings, but don't actively engage
+* passive users: simply use the software product and don't even join the communities
+
+As an open source developer, you want to delight all types of users.
+
+## Delighting active participants
+
+TODO
+
+## Delighting lurkers
+
+TODO
+
+## Delighting passive users
+
+TODO
+
 ## Community meetings
 
 Projects should hold community meetings periodically to highlight external project contributions, and new features, and discuss the roadmap.
