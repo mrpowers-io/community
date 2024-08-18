@@ -13,7 +13,7 @@ nav:
   - Home: index.md
   - Open Source:
       - Easy onboarding: open-source/easy-onboarding.md
-      - Grow Contributors: open-source/build-contributors.md
+      - Grow Contributors: open-source/grow-contributors.md
       - Communicate with chat apps: open-source/chat-apps.md
       - Code best practices: open-source/code-best-practices.md
       - Documentation best practices: open-source/documentation-best-practices.md

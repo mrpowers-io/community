@@ -12,15 +12,35 @@ As an open source developer, you want to delight all types of users.
 
 ## Delighting active participants
 
-TODO
+Active participants post in chat, comment in social, and ask questions at community meetings - make sure you always respond!
+
+It's frustrating to ask questions and not get an answer.  It's critical to always respond, even if you don't have a good answer.
+
+Always encourage active participants to get more involved:
+
+* invite them to contribute
+* tell them to respond to other users
+* ask them to present or blog
+
+Active participants love helping out and are a great way to build a community!
 
 ## Delighting lurkers
 
-TODO
+Lurkers follow conversations in chat and monitor GitHub activity, but they don't ever comment.
+
+You can make lurkers happy by creating a good community vibe and by outputting a steady stream of insightful content.
+
+Lurkers are content consumers and appreciate good blog posts and docs.  Make sure to consistently invite lurkers to become active in Slack or to make PRs in GitHub, so they know that becoming a contributor is an option.
 
 ## Delighting passive users
 
-TODO
+Passive users depend on your software project, but don't bother joining the chat or monitoring GitHub.
+
+They're just interested in using your library to build their own apps.
+
+The best way to delight passive users is to build a project that's bug-free, provides descriptive error messages, has awesome documentation, and is well maintained.
+
+Passive users don't like when upgrading library versions causes breakages, so avoid making breaking changes at all costs.  Follow semantic versioning strictly if you ever introduce a breaking change.  Always consider building new functionality alongside existing public functions rather than removing the exising functions, so your code maintains backwards compatibility.  Deprecating is often better than breaking changes.
 
 ## Community meetings
 

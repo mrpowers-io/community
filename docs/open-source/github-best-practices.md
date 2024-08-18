@@ -4,10 +4,10 @@
 
 We should respond to all GitHub issues in a timely manner (generally within a few days).  There are a variety of actions that can take place after reviewing a GitHub issue:
 
-* Convert it to a GitHub Discussion  
+* Convert it to a GitHub Discussion
 * Answer and close it
-* Ask for more details  
-* Ask the issue creator if they would like to build the feature  
+* Ask for more details
+* Ask the issue creator if they would like to build the feature
 
 It's best to link PRs to GitHub issues so the work is more trackable.
 
