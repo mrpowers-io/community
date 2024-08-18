@@ -1,8 +1,8 @@
-# Open source chat apps
+# Open-source chat apps
 
 There are a variety of tools open source communities use to chat like Slack, Discord, Matrix, and IRC.
 
-The best chat tool depends on the accessibility, community preferences, and cost.
+The best chat tool depends on accessibility, community preferences, and cost.
 
 ## Slack for open source communities
 
@@ -26,7 +26,7 @@ TODO
 
 TODO
 
-## Piggybacking on exising open source communities
+## Piggybacking on existing open source communities
 
 TODO
 
