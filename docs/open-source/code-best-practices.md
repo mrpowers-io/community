@@ -4,11 +4,11 @@ Project repositories should be exemplary of software engineering best practices.
 
 For example, Python repos should be PEP8 compliant, use best linting practices, have a release process built into the CI, have a deterministic build lock file, etc.
 
-The community should be able to look at your repos as an example of all modern best practices for Java, Scala, Python, and Rust.
+Your repos should be viewed by the community as an example of modern best practices for Java, Scala, Python, and Rust.
 
 ## Code formatting
 
-Code should use programatic formatting tools like black for Python or scalafmt for Scala.
+Code should use programmatic formatting tools like black for Python or scalafmt for Scala.
 
 PR comments with "code formatting nits" have gone out of style ever since Golang shipped gofmt.
 
@@ -20,11 +20,11 @@ Code should be versioned with [Semantic Versioning 2.0](https://semver.org/) ("S
 
 Make sure to document the code versioning scheme that's used and follow it strictly.
 
-Users depend on libraries to not make breaking changes that are inconsistent with the selected versioning scheme.  You need to be a reliable dependency for users or they'll look for other libraries as options.
+Users depend on libraries to avoid breaking changes that are inconsistent with the selected versioning scheme. You need to be a reliable dependency for users, or they'll look for other libraries as options.
 
 ## Continuous integration (CI)
 
-Continuous integration refers to automated build systems that run unit tests, code linting, and other checks on code branches.  These checks make it more likely that only high quality code is merged with the main branch.
+Continuous integration refers to automated build systems that run unit tests, code linting, and other checks on code branches.  These checks increase the likelihood of only high-quality code being merged with the main branch.
 
 
 
@@ -44,7 +44,7 @@ TODO
 
 TODO
 
-## Language specific code best practices
+## Language-specific code best practices
 
 TODO
 
