@@ -11,7 +11,7 @@ We should respond to all GitHub issues in a timely manner (generally within a fe
 
 It's best to link PRs to GitHub issues so the work is more trackable.
 
-Close issues older than 6 months with a GitHub action.  Let the PR author know they can re-open if the PR should still be open.
+Close issues older than 6 months with a GitHub action.  Let the PR author know they can re-open if it is still valid.
 
 Assign issues to team/community members, so it’s clear who is responsible for driving the issue to completion.
 
@@ -27,13 +27,13 @@ If the comments become extensive, we should offer to help and push commits to ge
 
 GitHub issues should be assigned to milestones.  The upcoming milestone should have a date.  We can set the date to whatever we’d like and change it at any time.
 
-The GitHub milestones serve as the open source roadmap.  It's cumbersome to manage the roadmap with a external Google Doc or a giant issue.
+The GitHub milestones serve as the open source roadmap.  It's cumbersome to manage the roadmap with an external Google Doc or a giant issue.
 
-Milestones offer the flexibility that’s necessary for open source project management.   You can easily move issues to different milestones when the situation changes.
+Milestones offer the flexibility necessary for open source project management. When the situation changes, issues can easily be moved to different milestones.
 
 ## Open source GitHub Discussions
 
-GitHub discussions are better for Q\&A, Ideas, announcements, ideas, polls, and show & tell.
+GitHub discussions are better for Q&A, Ideas, announcements, ideas, polls, and show and tell.
 
 It’s easy to convert GitHub issues to GitHub discussions and it’s a really nice tool when triaging issues.
 
