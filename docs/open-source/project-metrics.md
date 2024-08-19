@@ -27,7 +27,7 @@ Fudging an individual metric in an undetectable manner is actually hard.  It's e
 
 Gaming a whole basket of metrics would be quite challenging.  It would also be so obvious.  Each platform actively monitors fake activity and you'd likely get banned.
 
-Gaming metrics is a choice and you don't need to do it.  You should let your project metrics grow organically, so they give you an accurate reading on the state of your project.
+You don't need to game your project metrics of course.  You should let your project metrics grow organically, so they give you an accurate reading on the state of your project.
 
 ## Number of new contributors
 
@@ -41,24 +41,47 @@ A growing contributor base generally indicates: 1. interest in the project, 2. e
 
 ## GitHub stars
 
-TODO
+The number of GitHub stars is correlated with project interest and usage.
+
+Developers star repos the find interesting or that they depend on.
+
+Projects with growing star counts are generally also growing.
 
 ## LinkedIn followers
 
-TODO
+Large projects should have a LinkedIn page where users can follow and learn about new features.  You need to post regularly to the LinkedIn page to build a following.
+
+Don't start a LinkedIn page if your library is small or if you're not ready to post frequently.
+
+If you do have a LinkedIn page, tracking the number of followers is a good way to measure project growth.
 
 ## Project downloads
 
-TODO
+Project downloads are also a good way to measure project growth, albeit a flawed metric because most software downloads are bots.
+
+Some software artifact repositories like PyPI provide download numbers by operating system that provide a more realistic number on how many individuals install a software project on a local laptop every day.
+
+Other software artifact repositories like Maven don't provide download information, so these metrics are not easily accessible.
 
 ## Number of open issues/PRs
 
-TODO
+Projects with lots of new issues and PRs are generally growing.
+
+Make sure to respond to the issues/PRs quickly and help contributors merge their PRs to keep the project momentum high.
+
+It's good to track how many issues/PRs are created and closed to monitor the project growth and the quality of maintenance for the open source contributors.
 
 ## Documentation page views
 
-TODO
+The number of documentation page views and time on page is correlated with the actual usage of a project.
+
+If users are spending a lot of time on your documentation pages, it's likely that they are also using your software library a lot.
+
+It's best to use privacy friendly analytics gathering tools to measure user traffic.  You don't need to collect any private user data.  Just gather the data that's necessary to provide your users a great documentation experience.
 
 ## Conclusion
 
-Tracking metrics is a great way to fine-tune focus areas. If a project isn’t getting enough new contributors, focus on creating more issues with the “good first issue” label and responding to new contributors faster on GitHub.
+Tracking metrics is a great way to fine-tune focus areas for the development team. If a project isn’t getting enough new contributors, focus on creating more issues with the “good first issue” label and responding to new contributors faster on GitHub.  If a project isn't getting enough downloads, focus on writing blog posts to highlight the cool features.
+
+Stay disiplined and track project metrics on a monthly or quarterly business.  Software engineers are generally interested in writing code and don't spend enough time community building and marketing cool features of their project.  Metrics encourage you to focus on the weak parts of your project.
+
