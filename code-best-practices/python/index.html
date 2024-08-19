@@ -1,0 +1,929 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mrpowers.io/code-best-practices/python/">
+      
+      
+        <link rel="prev" href="../../open-source/project-metrics/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Python - MrPowers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-code-best-practices" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MrPowers" class="md-header__button md-logo" aria-label="MrPowers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MrPowers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MrPowers" class="md-nav__button md-logo" aria-label="MrPowers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MrPowers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Open Source
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Open Source
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-source/easy-onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Easy onboarding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-source/grow-contributors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grow Contributors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-source/chat-apps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communicate with chat apps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-source/code-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-source/documentation-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-source/github-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-source/grow-community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grow community
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-source/project-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Code best practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Code best practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#define-public-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define public interfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code-autoformatting-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Code autoformatting tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code-linting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Code linting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-type-hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Type hints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-build-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python build tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limiting-python-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limiting Python dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-python-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Python dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-python-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Python versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python code performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Code style
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#define-public-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define public interfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code-autoformatting-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Code autoformatting tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code-linting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Code linting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-type-hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Type hints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-build-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python build tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limiting-python-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limiting Python dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-python-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Python dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-python-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Python versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python code performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Code style
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="python-code-best-practices">Python Code Best Practices</h1>
+<p>This page outlines the best practices for writing Python code in 2024.</p>
+<p>You will learn about how to expose Python public interfaces, code formatting and linting, and proper typing.</p>
+<h2 id="define-public-interfaces">Define public interfaces</h2>
+<p>Python codebases should expose end-user functionality via clearly defined public interfaces.</p>
+<p>The public interfaces should be easy to import.  Let's take a look at how to in the pandas library for example:</p>
+<pre><code class="language-python">import pandas as pd
+</code></pre>
+<p>This import makes it easy to import the public functions like <code>pd.read_parquet</code> or <code>pd.read_csv</code>.</p>
+<p>Python codebases must only expose the public interface in the documentation.  Don't make the mistake of improperly structuring your code and not clearly defining a public interface.</p>
+<h2 id="python-code-autoformatting-tools">Python Code autoformatting tools</h2>
+<p>Python codebases can be autoformatted with Black or Ruff.</p>
+<p>Repos should contain clear instructions on how to autoformat the code via text editor integrations, pre commit hooks, or CI.  The code should be setup so that autoformatting the code is straightforward for all developers.</p>
+<p>This saves the whole team a lot of wasted effort talking about code styling and from providing code formatting nits in PR reviews.</p>
+<h2 id="python-code-linting">Python Code linting</h2>
+<p>Ruff is a good tool for linting code.</p>
+<p>Code linters ensure that code is compliant with PEP8.</p>
+<p>You should lint all your code and prevent new code from getting merged unless it is properly linted.</p>
+<h2 id="python-type-hints">Python Type hints</h2>
+<p>Modern Python code should use type hints.</p>
+<p>Here's an example of a function without type hints:</p>
+<pre><code class="language-python">TODO
+</code></pre>
+<p>Here's the same function with type hints:</p>
+<pre><code class="language-python">TODO
+</code></pre>
+<p>Type hints have a variety of advantages:</p>
+<ul>
+<li>make it easier to invoke the function</li>
+<li>prevent the function from being invoked with inproper arguments</li>
+<li>provide higher quality documentation for end users with clear inputs and outputs</li>
+</ul>
+<h2 id="python-build-tools">Python build tools</h2>
+<p>There are many popular build tools for Python projects like Poetry and TODO.</p>
+<p>Poetry has nice features and encourages coding best practices.</p>
+<ul>
+<li>users can specify different dependency groups</li>
+<li>dependencies can be listed in the <code>pypoetry.toml</code> file</li>
+<li>The exact versions of all dependencies and transitive dependencies is specified in the <code>poetry.lock</code> file to allow for deterministic builds</li>
+<li>nice developer quality of life features like single commands to build wheel files and deploy to PyPI</li>
+</ul>
+<p>Using Poetry to properly specify dependencies is better than listing dependencies in a <code>requirements.txt</code> file for the following reasons:</p>
+<ul>
+<li><code>requirements.txt</code> files don't specify exact versions of dependencies / transitive dependencies, so builds are not deterministic</li>
+<li>no quality of life helper functions</li>
+</ul>
+<p>You should build your Python projects with a proper build tool.</p>
+<h2 id="python-documentation">Python documentation</h2>
+<p>You should have well-documented instructions to generate documentation for the public interface of your project.</p>
+<p>The public facing documentation should provide examples and give users a solid understanding of the functionality provided by your library.</p>
+<p>The best alternative is a user guide that's generated by humans for a high level overview of the project and programatic generated API documentation with easily accessible details for each component of the public interface.</p>
+<h2 id="limiting-python-dependencies">Limiting Python dependencies</h2>
+<p>You should limit the number of dependencies and transitive dependencies in your projects, especially if you're building a library.</p>
+<p>Remember that if you depend on one library which in turn depends on 10 other library, then you have 11 dependencies, not just one dependency.</p>
+<p>Dependencies can cause dependency hell for end users, so you always need to througoly vet all dependencies.  You also need to analyze all the transitive dependencies that are pulled in and make sure the projects are maintained well for the long term viability of your codebase.</p>
+<h2 id="optional-python-dependencies">Optional Python dependencies</h2>
+<p>Some dependencies in Python projects can be specified as optional if the funcionality is only relevant for a subset of users.</p>
+<p>Use optional dependencies whenever possible rather than requiring all users to install all dependencies, even when they're not needed.</p>
+<p>PyPI has a nice installation process for optional dependencies.  Here's an example of how to install Polars with the optional deltalake dependency:</p>
+<p>TODO</p>
+<p>This optional dependency powers the <code>pl.read_delta</code> and <code>pl.scan_delta</code> functionality.  It's only required for Polars users that want to read Delta Lake tables.</p>
+<h2 id="supported-python-versions">Supported Python versions</h2>
+<p>Your Python library should support Python versions applicable to your users.</p>
+<p>You can't just support the latest Python version because that will make your code inaccessible to users running older versions of Python.</p>
+<p>This unfortunately means the Python library developers generally can't use the latest features of Python (unless they've been backported to earlier Python versions).</p>
+<h2 id="python-code-performance">Python code performance</h2>
+<p>TODO</p>
+<h2 id="python-code-style">Python Code style</h2>
+<p>There are various Python code style guides that recommend the object oriented/functional programming style, max lines in functions, and max lines in files.</p>
+<p>You can even quantify the code quality with tools like TODO.</p>
+<p>Nice code style is preferable, but it's comparatively less important than a clean public interface, a proper number of dependencies, and code that meets performance needs.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../open-source/project-metrics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Project metrics">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Project metrics
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.code.copy", "navigation.footer", "navigation.expand", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>
