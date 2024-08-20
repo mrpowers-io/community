@@ -22,3 +22,7 @@ nav:
       - Project metrics: open-source/project-metrics.md
   - Code best practices:
       - Python: code-best-practices/python.md
+  - Governance:
+      - mrpowers-io GitHub organization: governance/mrpowers-io-org.md
+      - mrpowers-io repos: governance/mrpowers-io-repos.md
+
