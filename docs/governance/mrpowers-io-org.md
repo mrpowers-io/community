@@ -1,6 +1,6 @@
 # mrpowers-io GitHub organization
 
-The mrpowers-io GitHub organization is owned by [Matthew Powers](https://www.linkedin.com/in/matthew-powers-cfa/) and [Sem Sinchenko](https://www.linkedin.com/in/semyon-a-sinchenko/) ("org owners").
+The mrpowers-io GitHub organization is owned by [Matthew Powers](https://www.linkedin.com/in/matthew-powers-cfa/) and [Sem Sinchenko](https://github.com/SemyonSinchenko) ("org owners").
 
 The org owners are responsible for overseeing projects and reviewing project reports on a quarterly basis.
 
@@ -10,8 +10,6 @@ The org owners are responsible for voting on new projects that will be added in 
 
 The org owners are also responsible for monitoring the projects at a high-level including code quality, documentaion, the README, and repo activity.
 
-mrpowers-io is generally for repos that are being actively developed and used.
-
 ## Managing repo permissions
 
 The org owners will have to manage repo permissions from time-to-time.
@@ -20,7 +18,7 @@ The org owners may need to add a new maintainer to a repo if other repo owners d
 
 ## Overseeing package manager permissions
 
-Repos in the mrpowers-io organization will often be bundled and distributed via a package manager like Maven or PyPI.
+Repos in the mrpowers-io organization will often be bundled and distributed via a package manager like Maven, PyPI, or Cargo.
 
 Repo maintainers should also have access to make releases via package managers.
 
